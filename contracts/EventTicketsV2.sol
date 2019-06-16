@@ -137,7 +137,7 @@ contract EventTicketsV2 {
 
         require(thisEvent.isOpen ==true);
         require(msg.value>=tickets*PRICE_TICKET);
-        require(thisEvent.totalTickets>=tickets);
+        require(thisEvent.totalTickets-thisEvent.sales>=tickets);
 
 
         thisEvent.buyers[msg.sender] +=tickets;
