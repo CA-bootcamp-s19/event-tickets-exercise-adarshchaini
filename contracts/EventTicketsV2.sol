@@ -166,7 +166,6 @@ contract EventTicketsV2 {
         events[eventId].sales -=purchasedTickets;
         msg.sender.transfer(purchasedTickets*PRICE_TICKET);
         emit LogGetRefund(msg.sender,eventId,purchasedTickets);
-
     }
 
 
